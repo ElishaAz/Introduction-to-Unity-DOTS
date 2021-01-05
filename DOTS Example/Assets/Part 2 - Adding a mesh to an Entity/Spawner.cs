@@ -32,16 +32,16 @@ namespace Part2
 
 			Entity myEntity = entityManager.CreateEntity(archetype);
 
-			entityManager.AddComponentData(myEntity, new Translation
-			{
-				Value = new float3(2f, 0f, 4f)
-			});
+			var translation = new Translation();
+			translation.Value = new float3(2f, 0f, 4f);
 
-			entityManager.AddSharedComponentData(myEntity, new RenderMesh
-			{
-				mesh = mesh,
-				material = mat
-			});
+			entityManager.AddComponentData(myEntity, translation);
+
+			var renderMesh = new RenderMesh();
+			renderMesh.mesh = mesh;
+			renderMesh.material = mat;
+
+			entityManager.AddSharedComponentData(myEntity, renderMesh);
 		}
 	}
 }

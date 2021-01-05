@@ -26,7 +26,6 @@ namespace Part1
 			Entity myEntity = entityManager.CreateEntity(archetype);
 
 			var translation = new Translation();
-			
 			translation.Value = new float3(2f, 0f, 4f);
 
 			entityManager.AddComponentData(myEntity, translation);
