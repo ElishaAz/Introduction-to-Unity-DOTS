@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Part3;
+using UnityEngine;
 using Unity.Entities; // For ECS
 using Unity.Mathematics; // For math in ECS
 using Unity.Transforms; // For the equivalent of Transform in ECS

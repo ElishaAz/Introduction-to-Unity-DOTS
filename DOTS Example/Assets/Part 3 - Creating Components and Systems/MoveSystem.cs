@@ -1,7 +1,6 @@
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
-using UnityEngine;
 
 namespace Part3
 {
@@ -14,7 +13,7 @@ namespace Part3
 			{
 				float3 normalizedDirection = math.normalize(moveData.direction);
 				translation.Value += normalizedDirection * moveData.speed * deltaTime;
-			}).ScheduleParallel();
+			}).Run();
 		}
 	}
 }
